@@ -1,0 +1,39 @@
+[submodule "secretflow"]
+	path = secretflow
+	url = git@github.com:secretflow/secretflow.git
+[submodule "kuscia"]
+	path = kuscia
+	url = git@github.com:secretflow/kuscia.git
+[submodule "authmanager"]
+	path = authmanager
+	url = git@github.com:secretflow/authmanager.git
+[submodule "kuscia-envoy"]
+	path = kuscia-envoy
+	url = git@github.com:secretflow/kuscia-envoy.git
+[submodule "rayfed"]
+	path = rayfed
+	url = git@github.com:secretflow/rayfed.git
+[submodule "scql"]
+	path = scql
+	url = git@github.com:secretflow/scql.git
+[submodule "secretflow-test"]
+	path = secretflow-test
+	url = git@github.com:LeoneChen/secretflow-test.git
+[submodule "secretpad"]
+	path = secretpad
+	url = git@github.com:secretflow/secretpad.git
+[submodule "secretpad-frontend"]
+	path = secretpad-frontend
+	url = git@github.com:secretflow/secretpad-frontend.git
+[submodule "secure-data-capsule-apis"]
+	path = secure-data-capsule-apis
+	url = git@github.com:secretflow/secure-data-capsule-apis.git
+[submodule "secure-data-capsule-sdk"]
+	path = secure-data-capsule-sdk
+	url = git@github.com:secretflow/secure-data-capsule-sdk.git
+[submodule "spu"]
+	path = spu
+	url = git@github.com:secretflow/spu.git
+[submodule "yacl"]
+	path = yacl
+	url = git@github.com:secretflow/yacl.git
