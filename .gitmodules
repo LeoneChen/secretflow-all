@@ -37,3 +37,6 @@
 [submodule "yacl"]
 	path = yacl
 	url = git@github.com:secretflow/yacl.git
+[submodule "interconnection"]
+	path = interconnection
+	url = git@github.com:secretflow/interconnection.git
