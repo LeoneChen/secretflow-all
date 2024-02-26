@@ -1,0 +1,62 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "/home/leone/anaconda3/envs/spu/bin/python",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                },
+                {
+                    "text": "-gdb-set substitute-path /proc/self/cwd/spu /home/leone/secretflow-all/spu/spu",
+                },
+                {
+                    "text": "-gdb-set substitute-path /proc/self/cwd/libspu /home/leone/secretflow-all/spu/libspu",
+                },
+                {
+                    "text": "-gdb-set substitute-path /proc/self/cwd/external /home/leone/.cache/bazel/_bazel_leone/5801df661932def29b65753579e99567/external",
+                },
+                {
+                    "text": "-gdb-set substitute-path /proc/self/cwd/bazel-out/ /home/leone/.cache/bazel/_bazel_leone/5801df661932def29b65753579e99567/execroot/spulib/bazel-out",
+                }
+            ]
+        },
+        {
+            "name": "spu.utils.distributed",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "spu.utils.distributed",
+            "args": [
+                "up"
+            ],
+            "console": "integratedTerminal",
+            "python": "/home/leone/anaconda3/envs/spu/bin/python",
+            "justMyCode": false,
+            "stopOnEntry": true
+        },
+        {
+            "name": "millionaire.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/spu/examples/python/millionaire.py",
+            "console": "integratedTerminal",
+            "python": "/home/leone/anaconda3/envs/spu/bin/python",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/spu"
+        }
+    ]
+}
