@@ -5,6 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "nodectl",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/spu/bazel-bin/examples/python/utils/nodectl",
+            "cwd": "${workspaceFolder}/spu",
+            "args": [
+                "up"
+            ],
+            "console": "integratedTerminal",
+            "python": "/home/leone/anaconda3/envs/spu/bin/python",
+        },
+        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
@@ -31,7 +43,7 @@
                     "text": "-gdb-set substitute-path /proc/self/cwd/external /home/leone/.cache/bazel/_bazel_leone/5801df661932def29b65753579e99567/external",
                 },
                 {
-                    "text": "-gdb-set substitute-path /proc/self/cwd/bazel-out/ /home/leone/.cache/bazel/_bazel_leone/5801df661932def29b65753579e99567/execroot/spulib/bazel-out",
+                    "text": "-gdb-set substitute-path /proc/self/cwd /home/leone/secretflow-all/spu",
                 }
             ]
         },
