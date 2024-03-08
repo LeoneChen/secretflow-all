@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "spu code",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/secretflow-test/fail/07381f604ac3af65394a55cd50dc3003468436a638d88c95e923e19a939db234_spu_code.py",
+            "console": "integratedTerminal",
+            "python": "/home/chenliheng/anaconda3/envs/secretflow/bin/python",
+            "justMyCode": false,
+            "stopOnEntry": true
+        },
+        {
             "name": "nodectl",
             "type": "debugpy",
             "request": "launch",
