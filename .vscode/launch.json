@@ -5,14 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "driver.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/secretflow-test/driver.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/secretflow-test",
+            "python": "/home/leone/anaconda3/envs/sf_test/bin/python",
+            "pythonArgs": [
+                "-Xfrozen_modules=off"
+            ]
+        },
+        {
             "name": "spu code",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/secretflow-test/fail/07381f604ac3af65394a55cd50dc3003468436a638d88c95e923e19a939db234_spu_code.py",
+            "program": "${workspaceFolder/secretflow-test/seeds/02c4c7370e9ca7887f0db07e6473266f92d354ca87aa6464c17e5f286366e20c_spu_code.py",
             "console": "integratedTerminal",
-            "python": "/home/chenliheng/anaconda3/envs/secretflow/bin/python",
+            "python": "/home/leone/anaconda3/envs/sf/bin/python",
             "justMyCode": false,
-            "stopOnEntry": true
+            "stopOnEntry": true,
+            "env": {
+                "JAX_PLATFORMS": "cpu",
+            }
         },
         {
             "name": "nodectl",
