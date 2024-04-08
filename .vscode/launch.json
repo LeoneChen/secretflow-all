@@ -5,6 +5,76 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "driver",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/capsule-manager/fuzzer/build/driver",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/capsule-manager/fuzzer",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "capsule_manager",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/capsule-manager/target/x86_64-unknown-linux-gnu/debug/capsule_manager",
+            "args": [
+                "--enable-tls=false",
+                "--port",
+                "8888",
+                "--storage-backend=inmemory",
+                "--log_config.log_level=debug"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/capsule-manager",
+            "environment": [
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "/home/chenliheng/secretflow-all/capsule-manager/second_party/remote-attestation/c/lib"
+                },
+                {
+                    "name": "ASAN_OPTIONS",
+                    "value": "detect_odr_violation=0:cov_8bit_counters_out=cm.cov_8bit_counters_out:cov_pcs_out=cm.cov_pcs_out"
+                },
+            ],
+            "externalConsole": false,
+            // "MIMode": "gdb",
+            "miDebuggerPath": "/home/chenliheng/.cargo/bin/rust-gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                },
+                {
+                    "text": "-gdb-set substitute-path /rustc/llvm/src/llvm-project /home/chenliheng/llvm-project",
+                },
+                {
+                    "text": "-gdb-set print asm-demangle on",
+                }
+            ]
+        },
+        {
             "name": "driver.py",
             "type": "debugpy",
             "request": "launch",

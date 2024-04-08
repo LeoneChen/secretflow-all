@@ -40,3 +40,15 @@
 [submodule "interconnection"]
 	path = interconnection
 	url = git@github.com:secretflow/interconnection.git
+[submodule "capsule-manager"]
+	path = capsule-manager
+	url = git@github.com:secretflow/capsule-manager.git
+[submodule "teeapps"]
+	path = teeapps
+	url = git@github.com:secretflow/teeapps.git
+[submodule "trustedflow"]
+	path = trustedflow
+	url = git@github.com:secretflow/trustedflow.git
+[submodule "capsule-manager-sdk"]
+	path = capsule-manager-sdk
+	url = git@github.com:secretflow/capsule-manager-sdk.git
