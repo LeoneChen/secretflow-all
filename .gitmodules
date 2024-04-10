@@ -52,3 +52,6 @@
 [submodule "capsule-manager-sdk"]
 	path = capsule-manager-sdk
 	url = git@github.com:secretflow/capsule-manager-sdk.git
+[submodule "cm_fuzz"]
+	path = cm_fuzz
+	url = git@github.com:LeoneChen/cm_fuzz.git
