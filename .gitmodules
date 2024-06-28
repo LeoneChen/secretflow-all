@@ -49,3 +49,6 @@
 [submodule "capsule-manager-sdk"]
 	path = capsule-manager-sdk
 	url = git@github.com:secretflow/capsule-manager-sdk.git
+[submodule "xla"]
+	path = xla
+	url = git@github.com:openxla/xla.git

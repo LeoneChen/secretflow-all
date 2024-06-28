@@ -90,7 +90,7 @@
             "name": "spu code",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder/secretflow-test/seeds/02c4c7370e9ca7887f0db07e6473266f92d354ca87aa6464c17e5f286366e20c_spu_code.py",
+            "program": "${workspaceFolder}/secretflow-test/seeds/02d253412b634d000b48f9fcdac7df409023f3dbb903ef763111b97b2782bf69_spu_code.py",
             "console": "integratedTerminal",
             "python": "/home/leone/anaconda3/envs/sf/bin/python",
             "justMyCode": false,
@@ -100,19 +100,7 @@
             }
         },
         {
-            "name": "nodectl",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/spu/bazel-bin/examples/python/utils/nodectl",
-            "cwd": "${workspaceFolder}/spu",
-            "args": [
-                "up"
-            ],
-            "console": "integratedTerminal",
-            "python": "/home/leone/anaconda3/envs/spu/bin/python",
-        },
-        {
-            "name": "(gdb) Attach",
+            "name": "python",
             "type": "cppdbg",
             "request": "attach",
             "program": "/home/leone/anaconda3/envs/spu/bin/python",
@@ -156,6 +144,18 @@
             "stopOnEntry": true
         },
         {
+            "name": "nodectl",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/spu/bazel-bin/examples/python/utils/nodectl",
+            "cwd": "${workspaceFolder}/spu",
+            "args": [
+                "up"
+            ],
+            "console": "integratedTerminal",
+            "python": "/home/leone/anaconda3/envs/spu/bin/python",
+        },
+        {
             "name": "millionaire.py",
             "type": "debugpy",
             "request": "launch",
@@ -163,7 +163,10 @@
             "console": "integratedTerminal",
             "python": "/home/leone/anaconda3/envs/spu/bin/python",
             "justMyCode": false,
-            "cwd": "${workspaceFolder}/spu"
+            "cwd": "${workspaceFolder}/spu",
+            "env": {
+                "HLO_FILENAME": "/home/leone/secretflow-all/spu/test.hlo",
+            }
         }
     ]
 }
